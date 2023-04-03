@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <style>
+        body
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            overflow: hidden;
+        }
+        .tabuleiro
+        {
+            width: 600px;
+            height: 600px;
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: space-around;
+            align-self: center; 
+        }
+        .linhas
+        {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+        }
+        .verde
+        {
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            font-size: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+            box-shadow: 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="tabuleiro">
+
+    <div class="linhas">
+        <div onclick="Marcar('A00');" class="verde" id="A00">  </div>
+        <div onclick="Marcar('A01');" class="verde" id="A01">  </div>
+        <div onclick="Marcar('A02');" class="verde" id="A02">  </div>
+    </div>
+
+    <div class="linhas">
+        <div onclick="Marcar('A10');" class="verde" id="A10">  </div>
+        <div onclick="Marcar('A11');" class="verde" id="A11">  </div>
+        <div onclick="Marcar('A12');" class="verde" id="A12">  </div>
+    </div>
+
+    <div class="linhas">
+        <div onclick="Marcar('A20');" class="verde" id="A20">  </div>
+        <div onclick="Marcar('A21');" class="verde" id="A21">  </div>
+        <div onclick="Marcar('A22');" class="verde" id="A22">  </div>
+    </div>      
+    
+</div>
+
+</body>
+<script>
+    cliques = 0;
+
+    function Marcar(ID)
+    {
+        if(document.getElementById(ID).innerHTML == "")
+        {
+            cliques = cliques + 1;
+            if(ID=="A00")
+            {
+                if(cliques==1)
+                {
+                    A00.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A00.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A01")
+            {
+                if(cliques==1)
+                {
+                    A01.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A01.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A02")
+            {
+                if(cliques==1)
+                {
+                    A02.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A02.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A10")
+            {
+                if(cliques==1)
+                {
+                    A10.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A10.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A11")
+            {
+                if(cliques==1)
+                {
+                    A11.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A11.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A12")
+            {
+                if(cliques==1)
+                {
+                    A12.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A12.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A20")
+            {
+                if(cliques==1)
+                {
+                    A20.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A20.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A21")
+            {
+                if(cliques==1)
+                {
+                    A21.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A21.innerHTML = "0";
+                    cliques = 0;
+                }
+                
+            }
+            if(ID=="A22")
+            {
+                if(cliques==1)
+                {
+                    A22.innerHTML = "X";
+                }
+                if(cliques==2)
+                {
+                    A22.innerHTML = "0";
+                    cliques = 0;
+                }
+            }   
+            if(A00.innerHTML==A01.innerHTML && A01.innerHTML==A02.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }
+            if(A10.innerHTML==A11.innerHTML && A11.innerHTML==A12.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }
+            if(A20.innerHTML==A21.innerHTML && A21.innerHTML==A22.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }  
+            if(A00.innerHTML==A10.innerHTML && A10.innerHTML==A20.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            } 
+            if(A01.innerHTML==A11.innerHTML && A11.innerHTML==A21.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }   
+            if(A02.innerHTML==A12.innerHTML && A12.innerHTML==A22.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }  
+            if(A00.innerHTML==A11.innerHTML && A11.innerHTML==A22.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }  
+            if(A02.innerHTML==A11.innerHTML && A11.innerHTML==A20.innerHTML)
+            {
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A00.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O 0 GANHOU'));
+                
+                }
+            }  
+        }   
+    }   
+</script>
+</html>
